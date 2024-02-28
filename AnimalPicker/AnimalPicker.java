@@ -10,7 +10,7 @@ public class AnimalPicker {
 
         // Continually ask the user for a valid animal option until they provide one
         do {
-            System.out.println("Which animal would you like to see: a dog, a cat, or a fish?");
+            System.out.println("Which animal would you like to see: a dog, a cat, Lion, or a fish,?");
             input = scanner.nextLine().trim().toLowerCase();
 
             if (input.equals("dog")) {
@@ -22,7 +22,12 @@ public class AnimalPicker {
             } else if (input.equals("fish")) {
                 validInput = true;
                 printFish();
-            } else {
+            
+            }else if (input.equals("lion")) {
+                validInput = true;
+                printLion();
+
+            }else {
                 System.out.println("Invalid option. Please enter 'dog', 'cat', or 'fish'.");
             }
         } while (!validInput);
@@ -61,5 +66,10 @@ public class AnimalPicker {
         System.out.println(" .-*'`    `*-.._.-'/");
         System.out.println("< * ))     ,       ( ");
         System.out.println("  `*-._`._(__.--*'\"`.\\");
+    }
+
+    private static void printLion(){
+        //ASCII Art for a Lion
+        System.out.println("   |\\_                \\|\\||             \n  -\' | `.             -- ||||/       \n /7      `-._        /7   |||||/            \n/            `-.____/    |||||||/`-.____________\n\\-\'_                \\-\' |||||||||               `-._\n -- `-.              -/||||||||\\                `` -`.\n       |\\              /||||||\\             \\_  |   `\\\\\n       | \\  \\_______...-//|||\\|________...---\'\\  \\    \\\\\n       |  \\  \\            ||  |  \\ ``-.__--. | \\  |    ``-.__--.\n       |  |\\  \\          / |  |\\  \\   ``---\'/ / | |       ``---\'\n     _/  / _|  )      __/_/  / _|  )     __/ / _| |\n    /,__/ /,__/      /,_/,__/_/,__/     /,__/ /,__/          tbk");
     }
 }
